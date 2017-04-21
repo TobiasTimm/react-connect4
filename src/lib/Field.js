@@ -1,34 +1,26 @@
 class Field {
 
   constructor(x, y) {
-    this._x = x;
-    this._y = y;
-    this._empty = true;
-    this._player = undefined;
+    this.x = x;
+    this.y = y;
+    this.empty = true;
+    this.player = undefined;
   }
 
   player(player) {
-    this._player = player;
+    this.player = player;
   }
 
   isEmpty() {
-    return this._empty;
+    return this.empty;
   }
 
   isSet() {
-    return !this._empty;
+    return !this.empty;
   }
 
   hasSamePlayer(player) {
-    return this._player === player;
-  }
-
-  x() {
-    return this._x;
-  }
-
-  y() {
-    return this._y;
+    return this.player === player;
   }
 
 }

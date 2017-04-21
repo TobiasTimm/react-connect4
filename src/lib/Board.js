@@ -5,19 +5,31 @@ class Board {
   constructor() {
     this._rowCount = 6;
     this._columnCount = 7;
-    this._cells = [];
+    this._fields = [];
     for (let rowIndex = 0; rowIndex < this._rowCount; rowIndex++) {
       let rowArray = [];
       for (let columnIndex = 0; columnIndex < this._columnCount; columnIndex++) {
         rowArray.push(new Field(rowIndex, columnIndex));
       }
-      this._cells.push(rowArray);
+      this._fields.push(rowArray);
     }
 
   }
 
-  cells() {
-    return this._cells;
+  fields() {
+    return this._fields;
+  }
+
+  field(x, y) {
+    return this._fields[x][y];
+  }
+
+  row(x) {
+    return this._fields[x];
   }
 
 }
+
+export {
+  Board,
+};

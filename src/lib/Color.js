@@ -4,5 +4,5 @@ const Colors = {
 };
 
 export {
-  Colors;
-}
+  Colors,
+};
