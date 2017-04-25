@@ -1,5 +1,5 @@
 import {Board} from '../lib/Board';
-import {SET_FIELD} from '../actions/BoardActionTypes';
+import {RESET_BOARD, SET_FIELD} from '../actions/BoardActionTypes';
 import update from 'immutability-helper';
 
 const boardReducer = function boardReducer(state = Board(), action) {
@@ -15,6 +15,8 @@ const boardReducer = function boardReducer(state = Board(), action) {
           $splice: [[x, 1, newRow]],
         }),
       };
+    case RESET_BOARD:
+      return Board();
     default:
       return state;
   }
