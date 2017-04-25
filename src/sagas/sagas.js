@@ -1,6 +1,5 @@
 import {NEXT_PLAYER, SET_CURRENT_PLAYER} from '../actions/PlayerActionTypes';
-import {fork, put, select} from 'redux-saga/effects';
-import {takeEvery} from 'redux-saga';
+import {takeEvery, fork, put, select} from 'redux-saga/effects';
 
 function* root() {
   yield[fork(watchPlayers)];

@@ -1,0 +1,23 @@
+.game-board-wrapper {
+  display: table;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.stats {
+  display: table-cell;
+  width: 10%;
+  vertical-align: top;
+}
+
+.game-board {
+  display: table-cell;
+  width: 70%;
+  vertical-align: middle;
+}
+
+.players {
+  display: table-cell;
+  width: 20%;
+  vertical-align: top;
+}

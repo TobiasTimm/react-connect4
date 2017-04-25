@@ -8,10 +8,17 @@ import {Provider} from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './index.css';
+import {Player} from './lib/Player';
+import {Colors} from './lib/Color';
 
 injectTapEventPlugin();
 
-const initialState = {};
+const players = [new Player('Player 1', Colors.RED), new Player('Player 2', Colors.BLUE)];
+
+const initialState = {
+  players,
+  currentPlayer: players[0],
+};
 
 const store = configureStore(initialState);
 store.runSaga(rootSaga);

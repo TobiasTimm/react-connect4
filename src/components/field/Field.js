@@ -1,5 +1,6 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
+import './field.css';
 
 const style = {
   height: 100,
@@ -9,12 +10,12 @@ const style = {
   display: 'inline-block',
 };
 
-function Field({x, y, player}) {
+function Field({x, y, player, onClick}) {
   if (player) {
     style.backgroundColor = player.color;
   }
   return (
-      <Paper style={style} zDepth={1} circle={true}>
+      <Paper style={style}  zDepth={1} circle={true} onClick={onClick}>
       </Paper>);
 }
 

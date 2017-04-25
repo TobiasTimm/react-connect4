@@ -1,0 +1,23 @@
+.playersList {
+  list-style-type: none;
+}
+
+.playerItem {
+  display: table;
+  height: 25px;
+}
+
+.playerItemContent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.playerCircle {
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-right: 10px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
