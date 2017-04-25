@@ -1,12 +1,11 @@
-class Player {
-
-  constructor(name, color) {
-    this.name = name;
-    this.color = color;
-  }
-
+function Player(name, color) {
+  return {
+    name,
+    color,
+    turns: 0,
+  };
 }
 
 export {
   Player,
-}
+};

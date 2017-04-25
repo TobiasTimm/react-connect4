@@ -1,6 +1,6 @@
 const Colors = {
-  RED: 'red',
-  BLUE: 'blue',
+  RED: '#ff1a00',
+  YELLOW: '#ffd65e',
 };
 
 export {

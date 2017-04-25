@@ -13,7 +13,7 @@ import {Colors} from './lib/Color';
 
 injectTapEventPlugin();
 
-const players = [new Player('Player 1', Colors.RED), new Player('Player 2', Colors.BLUE)];
+const players = [Player('Player 1', Colors.RED), Player('Player 2', Colors.YELLOW)];
 
 const initialState = {
   players,

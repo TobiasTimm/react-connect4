@@ -5,10 +5,12 @@ import './field-row.css';
 function FieldRow({fields, onFieldClick}) {
   return (
       <div className="field-row">
-        {fields.map((field, index) => {
-          return <Field key={`field-x-${field.x}-y-${field.y}`}
-                        onClick={onFieldClick} {...field}/>;
-        })}
+        <div className="field-row-content">
+          {fields.map((field, index) => {
+            return <Field key={`field-x-${field.x}-y-${field.y}`}
+                          onClick={onFieldClick} {...field}/>;
+          })}
+        </div>
       </div>);
 }
 

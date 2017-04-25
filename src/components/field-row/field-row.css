@@ -1,5 +1,34 @@
 .field-row {
-  width: 100%;
   display: block;
   text-align: center;
+}
+
+.field-row-content {
+  width: 60%;
+  min-width: 800px;
+  border-left: 1px solid #ADADAD;
+  border-right: 1px solid #ADADAD;
+  background-color: #fcf9f9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field-row:first-child > .field-row-content {
+  border-top: 1px solid #ADADAD;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-toplright: 15px;
+}
+
+.field-row:last-child > .field-row-content {
+  border-bottom: 1px solid #ADADAD;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-bottomlright: 15px;
 }
