@@ -1,4 +1,4 @@
-function Field(x, y) {
+const Field = function Field(x, y) {
   return {
     empty: true,
     player: undefined,

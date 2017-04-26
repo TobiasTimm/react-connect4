@@ -1,23 +1,20 @@
 import React from 'react';
 import './players.css';
+import {Avatar, List, ListItem, Subheader} from 'material-ui';
 
 function Players({players}) {
   return (
-      <ul className='playersList'>
-        {players.map((player, index) => {
 
-          const circleStyle = {
-            backgroundColor: player.color,
-          };
+      <List>
+        <Subheader>Players</Subheader>
+        {players.map((player, index) => {
           return (
-              <li className='playerItem' key={`player-${index}`}>
-                <div className='playerItemContent'>
-                  <label>{player.name}</label>
-                  <div style={circleStyle} className='playerCircle'></div>
-                </div>
-              </li>);
+              <ListItem key={`player-${index}`}
+                        primaryText={player.name}
+                        leftAvatar={<Avatar backgroundColor={player.color}/>}
+              />);
         })}
-      </ul>
+      </List>
   );
 }
 

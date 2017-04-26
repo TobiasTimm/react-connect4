@@ -1,6 +1,6 @@
 import {Field} from './Field';
 
-function Board() {
+const Board = function Board() {
   let board = {
     rowCount: 6,
     columnCount: 7,

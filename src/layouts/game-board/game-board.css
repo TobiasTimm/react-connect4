@@ -5,23 +5,23 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
 }
 
-.stats {
+.overview-wrapper {
   padding-left: 5px;
   display: table-cell;
-  width: 10%;
+  width: 20%;
   vertical-align: top;
   box-shadow: rgba(0, 0, 0, 0.12) 0px -10px 6px, rgba(0, 0, 0, 0.12) 0px 0px 4px;
 }
 
-.game-board {
+.board-wrapper {
   padding-top: 25px;
   padding-bottom: 25px;
   display: table-cell;
-  width: 70%;
+  width: 60%;
   vertical-align: middle;
 }
 
-.players {
+.players-wrapper {
   padding-left: 5px;
   display: table-cell;
   width: 20%;

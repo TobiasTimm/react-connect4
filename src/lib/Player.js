@@ -1,8 +1,8 @@
-function Player(name, color) {
+const Player = function Player(name, color) {
   return {
     name,
     color,
-    turns: 0,
+    turns: 1,
   };
 }
 
