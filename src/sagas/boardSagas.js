@@ -11,19 +11,28 @@ function* watchFieldsOnBoard() {
 const getCurrentPlayer = (state) => {
   return state.currentPlayer;
 };
-const getCurrentField = (state, x, y) => {
-  return state.board.fields[x][y];
+
+const getNextFreeField = (state, columnIndex) => {
+  let rowsReversed = state.board.fields;
+  for (let i = rowsReversed.length - 1; i >= 0; i--) {
+    const row = rowsReversed[i];
+    const field = row[columnIndex];
+    if (!field.player) {
+      return field;
+    }
+  }
 };
 
 function* addCurrentPlayerToField(action) {
-  const {x, y} = action.payload;
-  const currentField = yield select(getCurrentField, x, y);
+  const {y} = action.payload;
+  const field = yield select(getNextFreeField, y);
   const currentPlayer = yield select(getCurrentPlayer);
-  if (!currentField.player) {
-    yield put(setField(x, y, currentPlayer));
+  if (field) {
+    yield put(setField(field.x, field.y, currentPlayer));
     yield put(nextPlayer());
   }
 }
+
 
 function* watchRestart() {
   yield takeEvery(RESET_BOARD, restartGame);

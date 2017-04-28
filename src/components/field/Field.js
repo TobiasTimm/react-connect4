@@ -16,7 +16,6 @@ function Field({x, y, player, onClick}) {
     let gradientColor = player.color === Colors.RED ? '#ff1a00' : '#febf04';
     let backgroundStyle = {
       background: player.color,
-      cursor: 'not-allowed',
       // eslint-disable-next-line
       background: `-moz-linear-gradient(top, ${player.color} 0%,  ${gradientColor}  100%)`,
       // eslint-disable-next-line
